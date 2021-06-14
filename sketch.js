@@ -108,14 +108,14 @@ function keyPressed(){
  sling.attach(stone.body);
 }
 async function getBackgroundImage(){
- var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Calcutta");
+ var response = await fetch("https://worldtimeapi.org/api/timezone/Asia/Calcutta");
  var responseJson = await response.json();
  var datetime = responseJson.datetime;
  var hour =  datetime.slice(11,13);
  console.log(hour);
  if(hour>=06 && hour<18 ){
-  backgroundImg = loadImage("bgs/day.jpg");
+  backgroundImg = loadImage("day.jpg");
  }else{
-  backgroundImg = loadImage("bgs/night.png");  
+  backgroundImg = loadImage("night.png");  
  }
 }
